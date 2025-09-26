@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7, #fbc2eb, #a18cd1);
+  background-size: 300% 300%;
+  animation: bgAnimation 10s ease infinite;
+  overflow-x: hidden;
+}
+
+/* ✨ Gradient Animation */
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 30px;
+}
+header h1 {
+  font-size: 3rem;
+  color: #fff0f6;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+
+
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 15px;
+  border: 5px solid #fff;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+
+section {
+  margin: 50px 0;
+}
+
+#countdown {
+  font-size: 2rem;
+  margin: 20px 0;
+  background: rgba(255, 182, 193, 0.4);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;        
+}
+
+sparkles::before, .sparkles::after {
+  content: "✨";
+  position: absolute;
+  font-size: 2rem;
+  animation: twinkle 3s infinite ;
+}
+.sparkles::before { top: 20%; left: 15%; }
+.sparkles::after { top: 40%; right: 20%; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+
+
+#musicBtn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: #ff80ab;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+#musicBtn:hover {
+  background: #f06292;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  animation: float 10s infinite;
+  opacity: 0.8;
+}
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-500px) rotate(15deg); }
+  100% { transform: translateY(-1000px) rotate(-15deg); }
+}
